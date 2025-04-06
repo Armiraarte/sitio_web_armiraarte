@@ -1,0 +1,224 @@
+@keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+/**
+* ? MOBILE DESIGN   
+*/
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+}
+
+/**
+* ? NAVBAR MOBILE  
+*/
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 60px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Contenedor del Navbar */
+.header__nav {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+/* Logo como imagen */
+.header__logo img {
+    height: 40px; /* Ajusta el tamaño */
+    width: auto; /* Mantiene la proporción */
+  }
+
+/* Botón Hamburguesa */
+.header__toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: black; /* Color predeterminado */
+  transition: color 0.3s ease-in-out;
+}
+.header__toggle--active {
+  color: white; /* Color al abrir el menú */
+}
+.header--active {
+  background-color: black; /* Cambia el fondo del header cuando el menú está abierto */
+}
+/* Estilos del Menú (Oculto en Mobile) */
+.header__menu {
+    list-style: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  /* Mostrar menú con animación */
+  .header__menu--active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideDown 0.3s ease-in-out;
+  }
+/* Estilos de los Items del Menú */
+.menu--dark .header__item {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu--dark .header__link {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Mostrar el Menú cuando esté activo */
+.header__menu--active {
+    display: flex;
+}
+/* Quitar subrayado de los enlaces del menú */
+.header__menu a {
+  text-decoration: none;
+}
+
+/* Sección que resta la altura del navbar */
+.section--first {
+  width: 100%;
+  height: calc(100vh - 60px); /* Resta la altura del navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray; /* Solo para visualizar */
+}
+
+/* Otras secciones (100vh completo) */
+.section--full {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue; /* Solo para visualizar */
+}
+
+/* Otras secciones ocupan toda la pantalla */
+.section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue; /* Solo para visualizar */
+}
+
+.hero {
+  position: relative;
+  background: url('../images/hologram.gif') no-repeat center center/cover;
+  overflow: hidden;
+}
+
+.hero__overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  height: 100%;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero__title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.hero__subtitle {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  color: #00aaff;
+}
+
+.hero__text {
+  margin: 20px 0;
+  font-size: 1rem;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__cta {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #00aaff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.hero__cta:hover {
+  background: #0077cc;
+}
+.hero__bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
