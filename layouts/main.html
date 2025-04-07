@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARMiRARTE</title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">0
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cantata+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  </head>
 <body>
     <div class="container">
         <header class="header">
@@ -20,28 +24,87 @@
                 <ul class="header__menu">
                     <li class="header__item"><a href="#">Inicio</a></li>
                     <li class="header__item"><a href="#">Servicios</a></li>
-                    <li class="header__item"><a href="#">Proyectos</a></li>
-                    <li class="header__item"><a href="#">Clientes</a></li>
+                    <li class="header__item"><a href="#">Catálogo</a></li>
+                    <li class="header__item"><a href="#">Blog</a></li>
                     <li class="header__item"><a href="#">Contacto</a></li>
                 </ul>
             </nav>
         </header>
-
         <!-- Primera sección (resta el navbar) -->
-        <section class="section section--first hero">
-            <div class="hero__overlay"></div>
-            <div class="hero__content">
-              <h1 class="hero__title">Transformando tu imaginación</h1>
+        <section class="section hero">
+          <div class="hero__content">
+            <h1 class="hero__title">Diseño e innovación empresarial</h1>
+            <p class="hero__subtitle">
+              Transformando tu imaginación.
+            </p>
+            <div class="hero__btn-wrapper">
+              <button class="glow-on-hover" type="button" id="scrollToServicios">Contactanos</button>
             </div>
+          </div>
         </section>
-        <section class="section section--second">
-            <div class="hero__overlay"></div>
-            <div class="hero__content">
-              <h1 class="hero__title">Transformando tu imaginación</h1>
+        <section class="section section--second about">
+          <div class="hero__overlay2"></div>
+          <div class="hero__content about__content">
+            <img src="../images/icono-logo_white.png" alt="Ícono Armiraarte" class="about__icon">
+            <h2 class="hero__title">¿Quiénes somos?</h2>
+            <p class="about__text">
+              <strong>Armirarte</strong> es una empresa dedicada a ofrecer soluciones estratégicas que combinan diseño, tecnología y visión empresarial. Ayudamos a negocios nuevos y consolidados a enfrentar sus retos mediante procesos creativos, herramientas innovadoras y una mirada adaptativa al futuro.
+            </p>
+          </div>
+        </section>
+        <section class="section hero2" id="servicios">
+          <div class="hero__overlay2"></div>
+          <div class="hero__content">
+            <h1 class="hero__title">Servicios</h1>
+            <p class="hero__subtitle">
+              En <strong>Armirarte</strong>, desarrollamos servicios innovadores que combinan estrategia, tecnología y adaptabilidad. Nuestro enfoque se ajusta a los desafíos de cada negocio, generando soluciones funcionales, escalables y con impacto real.
+            </p>
+            <div class="hero__btn-wrapper">
+              <button class="glow-on-hover" type="button" id="scrollToProyectos">Descubre más</button>
             </div>
+          </div>
         </section>
-    </div>
-
-    <script src="/js/main.js"></script>
+        <section class="section section--fived about">
+          <div class="hero__overlay4"></div>
+          <div class="hero__content ">
+            <h2 class="hero__title">Nuestros clientes</h2>
+            <p class="about__text">
+              En <strong>Armirarte</strong>, trabajamos con empresas que buscan innovar, crecer y destacar. Nos enfocamos en construir relaciones de valor, ofreciendo soluciones tecnológicas adaptadas a cada cliente, sin importar su tamaño o industria.
+            </p>
+            <div class="hero__btn-wrapper">
+              <button class="glow-on-hover" type="button" id="scrollToProyectos">Descubre más</button>
+            </div>
+            <div class="logo_centered">
+              <img src="../images/icono-logo_white.png" alt="Ícono Armiraarte" class="about__icon">
+            </div>
+          </div>
+          
+        </section>
+        <footer class="footer">
+          <div class="row row--icons">
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        
+          <div class="row">
+            <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Servicios</a></li>
+              <li><a href="#">Clientes</a></li>
+              <li><a href="#">Contacto</a></li>
+              <li><a href="#">Política de privacidad</a></li>
+            </ul>
+          </div>
+        
+          <div class="row">
+            © 2025 <strong>Armirarte</strong> - Todos los derechos reservados.
+          </div>
+        </footer>
+        
+        
+  </div>
+  <script src="/js/main.js"></script>
 </body>
 </html>
